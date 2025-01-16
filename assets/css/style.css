@@ -65,12 +65,14 @@ body{
     width: 100%;
     z-index:100;
     position: relative;
-    background: linear-gradient(rgba(124,0,201,.95), rgba(124,0,201,.95)), url("../images/office.png");
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+/* .portfolio.finx{
+    background: linear-gradient(rgba(124,0,201,.95), rgba(124,0,201,.95)), url("../images/wall_street.png");
+} */
 
 /*Privacy page*/
 .privacy-policy-container{
@@ -120,9 +122,13 @@ body{
     -webkit-text-stroke-color: white;
     font-family: 'Arcade';
 }
+.intro-info h5{
+	color: white;
+    font-family: 'Arcade';
+}
 
 .intro-info p{
-    color: grey;
+    color: rgb(255, 255, 255);
     font-family: 'Arcade';
     font-size: 12px;
 }

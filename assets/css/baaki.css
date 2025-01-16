@@ -1,0 +1,40 @@
+[baaki] {
+    opacity: 0; /* Start hidden */
+}
+
+/* Fade-up Animation */
+[baaki="fade-up"] {
+    opacity: 0; /* Start hidden */
+    transform: translateY(70px); /* Move down by 50% */
+}
+
+/* Fade-down Animation */
+[baaki="fade-down"] {
+    opacity: 0; /* Start hidden */
+    transform: translateY(-70px); /* Move down by 50% */
+}
+
+/* Fade-left Animation */
+[baaki="fade-left"] {
+    opacity: 0; /* Start hidden */
+    transform: translateX(-70px); /* Move right by 50% */
+}
+
+/* Fade-right Animation */
+[baaki="fade-right"] {
+    opacity: 0; /* Start hidden */
+    transform: translateX(70px); /* Move left by 50% */
+}
+
+/* Follow Animation */
+[baaki="follow"] {
+    opacity: 1;
+}
+
+[baaki="follow-reverse"] {
+    opacity: 1;
+}
+
+[baaki-opacity-animation="false"] {
+    opacity: 1;
+}
