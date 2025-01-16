@@ -1,0 +1,249 @@
+*{
+	margin: 0;
+	padding : 0;
+    box-sizing: border-box;
+}
+@font-face {
+	font-family: 'Arcade';
+	src: url('../fonts/ARCADE_N.TTF') format('truetype');
+}
+
+body{
+    background: black;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: black;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid black;
+  border-top-color: #7c00c9;
+  border-bottom-color: #7c00c9;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Portfolio */
+.portfolio{
+    height: 100vh;
+    width: 100%;
+    z-index:100;
+    position: relative;
+    background: linear-gradient(rgba(124,0,201,.95), rgba(124,0,201,.95)), url("../images/office.png");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/*Privacy page*/
+.privacy-policy-container{
+    padding: 50px 0 ;
+}
+.privacy-policy-container p {
+    color: grey;
+}
+
+.privacy-policy-container h1 {
+    color: white;
+}
+
+.privacy-policy-container h4 {
+    color: white;
+}
+
+.privacy-policy-container hr {
+    color: #ff00f7;
+}
+
+.privacy-policy-container i{
+    color:#ff00f7;
+    display: inline;
+}
+
+/*Main page*/
+.welcome-panel{
+	height: 100vh;
+	/*background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,.9)), url(../images/background-echo.png);*/
+	background-color: black;
+	width: 100%;
+    z-index:99;
+}
+
+.intro-info {
+	padding: 0 50px;
+}
+.intro-info h1{
+	color: white;
+    font-family: 'Arcade';
+}
+.intro-info h4{
+	color: transparent;
+	font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    font-family: 'Arcade';
+}
+
+.intro-info p{
+    color: grey;
+    font-family: 'Arcade';
+    font-size: 12px;
+}
+
+.show-more{
+    padding: 15px 20px;
+    display: inline-block;
+    background: #7c00c9;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Arcade';
+    transition: 0.3s ease-in-out;
+}
+
+.show-more:hover{
+    background: #ff00f7;
+}
+
+/*Thinker statues animation styles*/
+.thinker-block {
+    aspect-ratio: 1 / 1;
+    justify-content: center;
+    align-items: center;
+}
+.thinker-block .statue .spinning-text{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+
+.thinker-block .statue .animated-block{
+    animation: floating 5s ease-in-out infinite;
+    max-width:100%;
+}
+
+.thinker-block .statue{
+    width: 100%;
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.thinker-block .big-circle{
+	aspect-ratio: 1 / 1;
+    width: 100%;
+	position:absolute;
+    background-image: linear-gradient(to bottom right, #7c00c9, #ff00f7);
+    -webkit-box-shadow:0px 0px 300px 0px rgba(255,0,247,0.55);
+	-moz-box-shadow: 0px 0px 300px 0px rgba(255,0,247,0.55);
+	box-shadow: 0px 0px 300px 0px rgba(255,0,247,0.55);
+	border-radius: 50%;
+    left: 50%;
+    top: 0 ;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.big-circle-spinning{
+	transform-style: preserve-3d;
+    animation: animate 6s linear infinite;
+    --deg: calc(360deg / var(--numchs));
+    position:absolute;
+    z-index:1;
+}
+
+.big-circle-spinning .char{
+	position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+    font-size: 20px;
+	text-transform: uppercase;
+    padding: 5px 12px;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transform: rotateY(calc(var(--char-index) * 12deg )) translateZ(200px);
+    font-family: 'Arcade';
+}
+
+.big-circle-spinning .word {
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateY(360deg) rotateZ(15deg) ;
+    }
+
+    100% {
+        transform: perspective(1000px) rotateY(0deg) rotateZ(15deg) ;
+    }
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 20px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+@keyframes circle{
+  0%{
+    transform:rotate(0deg)
+              translate(-165px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-165px)
+              rotate(-360deg);
+  }
+}
+
+/*Technologies*/
+.technology{
+    height: 500px;
+    background: white;
+}

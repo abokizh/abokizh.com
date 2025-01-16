@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Abokizh</title>
+
+    <!-- Bootstrap -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Style.css -->
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+  <body>
+
+  	<!-- Welcome container -->
+  	<div class="welcome-panel">
+  		<div class="container intro-info" style="height:100%;">
+  			<div class="row align-items-center" style="height:100%;">	
+  				<div class="col-md-6 intro-text" style="">
+  					<h1>ABOKIZH.COM</h1>
+  					<h4>Make your dreams come digital</h4><br>
+            <p>Goal is to make millions ... to enjoy our producs and our effort in development and enhancement of the digital world</p>
+            <a class="show-more"><i class="bi bi-fire"></i> Show more</a>
+  				</div>
+  				<div class="col-md-6 thinker-block" style="position: relative;">
+            <div class="statue">
+              <div class="spinning-text">
+
+                <div class="big-circle-spinning" data-splitting style="margin-bottom:430px; animation-duration: 4s;">
+                  WEBSITES AND BACKEND
+                </div>
+
+                <div class="big-circle-spinning" data-splitting style="margin-bottom:230px; animation-duration: 5s;">
+                  MOBILE APPLICATIONS 
+                </div>
+
+                <div class="big-circle-spinning" data-splitting>
+                  ARTIFICIAL INTELIGENCE 
+                </div>
+
+                <div class="big-circle-spinning" data-splitting style="margin-bottom: -230px; animation-duration: 7s;">
+                  UI AND UX CUSTOM DESIGNS
+                </div>
+
+                <img src="./assets/images/thinker.png" alt="Italian Trulli" class="animated-block">
+              </div>
+            </div>
+  					<div class="big-circle">
+  					</div>
+  				</div>
+  			</div>
+  		</div>	
+  	</div>
+
+    <!-- Portfolio -->
+    <div class="portfolio">
+      <div class="container intro-info" style="height:100%;">
+        <div class="row align-items-center" style="height:100%;"> 
+          <div class="col-md-12 intro-text" style="">
+            <h1>ABOKIZH.COM</h1>
+            <h4>Make your dreams come digital</h4><br>
+            <p>Goal is to make millions ... to enjoy our producs and our effort in development and enhancement of the digital world</p>
+            <a class="show-more"><i class="bi bi-fire"></i> Show more</a>
+          </div>
+      </div>  
+    </div>
+
+    <div id="preloader"></div>
+
+    <!-- Bootstrap -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- splitting -->
+  	<script src="./assets/js/splitting.js"></script>
+  	<script> 
+      // scroll reveal
+      ScrollReveal().reveal('.intro-text', {
+        duration: 2000,
+        distance: "15%",
+        origin: "left"
+      });
+      ScrollReveal().reveal('.intro-text h1', {
+        duration: 2000,
+        distance: "200%",
+        origin: "bottom"
+      });
+      ScrollReveal().reveal('.intro-text h4', {
+        delay: 200,
+        duration: 2000,
+        distance: "200%",
+        origin: "bottom"
+      });
+      ScrollReveal().reveal('.intro-text p', {
+        delay: 400,
+        duration: 2000,
+        distance: "200%",
+        origin: "bottom"
+      });
+      // Statue scrollreveal
+      ScrollReveal().reveal('.thinker-block', {
+        delay: 500,
+        duration: 3000,
+        distance: "15%",
+        origin: "top"
+      });
+      // splitting
+  		Splitting({
+        whitespace: true
+      });
+      const circle = document.querySelector('.big-circle-spinning');
+      const text = circle.innerHTML;    
+      circle.style.setProperty('--numchs', text.length);
+  	</script>
+
+    <!-- Template Main JS File -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

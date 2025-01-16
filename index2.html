@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Abokizh</title>
+
+    <!-- Bootstrap -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet"><link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting.css'>
+    <link rel='stylesheet' href='https://unpkg.com/splitting/dist/splitting-cells.css'>
+    <!-- Style.css -->
+    <link href="./assets/css/style2.css" rel="stylesheet">
+  </head>
+  <body>
+
+  	<!-- Welcome container -->
+  	<div class="welcome-panel">
+  		<div class="container intro-info" style="height:100%;">
+  			<div class="row align-items-center" style="height:100%;">	
+  				<div class="col-md-6" style="">
+  					<h1>ABOKIZH</h1>
+  					<h3>Make your dreams come digital</h3>
+  				</div>
+  				<div class="col-md-6 spinning-block">
+  					<div class="circle" data-splitting>Reclaim the climate </div>
+            <img class="globe" src="./assets/images/thinker.png"/>
+  				</div>
+  			</div>
+  		</div>	
+  	</div>
+
+    <!-- Bootstrap -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- splitting -->
+	<script src="./assets/js/splitting.js"></script>
+	<script> 
+		const circle = document.querySelector('.circle');
+    const text = circle.innerHTML;// Note I am being lazy here and assuming the string has no unwanted whitespace
+    circle.innerHTML = '';        
+    circle.style.setProperty('--numchs', text.length);
+    for ( let i = 0; i < text.length; i++ ) {
+      circle.innerHTML = circle.innerHTML + '<div class="char" style="--char-index: ' + i + ';">' + text.charAt(i) + '</div>';
+    }
+	</script>
+  </body>
+</html>

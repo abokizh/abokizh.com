@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+body{
+    background: black;
+}
+.spinning-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+	transform-style: preserve-3d;
+	font-family: 'Black Han Sans', sans-serif;
+	
+}
+
+
+.circle {
+    transform-style: preserve-3d;
+    animation: animate 8s linear infinite;
+    --deg: calc(360deg / var(--numchs));
+	z-index: 1
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateY(360deg) rotateX(15deg);
+    }
+
+    100% {
+        transform: perspective(1000px) rotateY(0deg) rotateX(15deg);
+    }
+}
+
+.circle .char {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 4em;
+		text-transform: uppercase;
+    padding: 5px 12px;
+    transform-style: preserve-3d;
+    transform-origin: center;
+        transform: rotateY(calc(var(--char-index) * var(--deg))) translateZ(250px);
+font-family: 'Black Han Sans', sans-serif;
+
+}
+
+.circle .word {
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 20px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+.globe {
+	position: absolute;
+
+    animation: floating 5s ease-in-out infinite;
+	width: 300px;
+	height: 300px;
+	z-index: 0;
+	filter: grayscale(1);
+	
+}

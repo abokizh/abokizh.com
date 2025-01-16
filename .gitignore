@@ -1,0 +1,7 @@
+/api
+/api-ocr
+/SolveGPTBot
+/telegram-bot
+.env
+hw2.py
+recovery-server.pem
